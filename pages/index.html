@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <!--------DESCRIPCIÓN: Página principal del sitio--------->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Mundo Paper - Inicio</title>
+    
+    <!-- Google Fonts - Fuente Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Archivo de estilos principal -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="home-page">
+
+<!--ENCABEZADO / NAVEGACIÓN-->
+<header>
+    <div class="header-container">
+        <!-- Logo del sitio -->
+        <a href="index.html" class="logo">MI MUNDO PAPER</a>
+        
+        <!-- Menú de navegación -->
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html" class="activo">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="reseñas.html">Reseñas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!---CONTENIDO PRINCIPAL------->
+<main>
+    
+    <!-- SECCION HERO -->
+    <section class="hero-section">
+        <div class="hero-imagen">
+            <img src="../assets/MARMOL-BLANCO.jpeg" alt="Papelería artesanal Mi Mundo Paper">
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">MI MUNDO PAPER</h1>
+            <p class="hero-subtitle">Diseño y creación de papelería artesanal con creatividad y materiales de calidad</p>
+            <a href="portfolio.html" class="cta-button">Ver Portfolio</a>
+        </div>
+    </section>
+
+    <!-- SECCION PRESENTACION -->
+    <section id="inicio">
+        <h2 class="presentacion-texto">
+            Somos un estudio de diseño dedicado a la creación de papelería artesanal que transforma ideas y proyectos.
+        </h2>
+    </section>
+
+    <!-- SECCION SERVICIOS -->
+    <section id="servicios">
+        <h2>Nuestros Servicios</h2>
+        
+        <div class="services-grid">
+            <!-- Servicio 1 -->
+            <article class="service-card">
+                <div class="service-icon">
+                    <svg width="60" height="60" viewBox="0 0 60 60">
+                        <rect x="10" y="10" width="15" height="40" fill="#1a1a1a"/>
+                        <rect x="35" y="10" width="15" height="40" fill="#1a1a1a"/>
+                    </svg>
+                </div>
+                <h3>Identidad de Marca</h3>
+                <p>Diseñamos identidades que comunican valores y generan conexiones con las personas.</p>
+            </article>
+            
+            <!-- Servicio 2 -->
+            <article class="service-card">
+                <div class="service-icon">
+                    <svg width="60" height="60" viewBox="0 0 60 60">
+                        <circle cx="30" cy="30" r="8" fill="#1a1a1a"/>
+                        <circle cx="15" cy="30" r="5" fill="#666"/>
+                        <circle cx="45" cy="30" r="5" fill="#666"/>
+                    </svg>
+                </div>
+                <h3>Diseño Integral</h3>
+                <p>Nos adaptamos a las necesidades de cada proyecto con propuestas diversas.</p>
+            </article>
+            
+            <!-- Servicio 3 -->
+            <article class="service-card">
+                <div class="service-icon">
+                    <svg width="60" height="60" viewBox="0 0 60 60">
+                        <rect x="15" y="15" width="30" height="30" fill="#1a1a1a"/>
+                    </svg>
+                </div>
+                <h3>Papelería Artesanal</h3>
+                <p>Desarrollamos piezas únicas con materiales de calidad y cuidado estético.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section class="contact-section">
+    
+    
+
+    <div class="container">
+        <div class="row">
+            
+            <!--Columna izquierda Informacion-->
+            <div class="col-lg-5 mb-5 mb-lg-0">
+                
+                <!-- Título principal -->
+                <h1 class="contact-title">
+                    Si tenés una idea o proyecto y creés que podemos colaborar, escribinos y conversemos.
+                </h1>
+                
+                <!-- Enlaces a redes sociales -->
+                <div class="social-links">
+                    <a href="https://www.instagram.com/mimundo_paper/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                </div>
+
+                
+            </div>
+
+            <!--COLUMNA DERECHA - Formulario-->
+            
+            <div class="col-lg-6 offset-lg-1">
+                
+                <!-- Formulario de contacto -->
+                <form id="contactForm">
+                    
+                    <!-- Campo: Nombre -->
+                    <div class="mb-4">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="nombre" 
+                            name="nombre" 
+                            placeholder="Nombre" 
+                            required>
+                    </div>
+
+                    <!-- Campo: Email -->
+                    <div class="mb-4">
+                        <label for="email" class="form-label">Mail</label>
+                        <input 
+                            type="email" 
+                            class="form-control" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Mail" 
+                            required>
+                    </div>
+
+                    <!-- Campo: Mensaje -->
+                    <div class="mb-4">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea 
+                            class="form-control" 
+                            id="mensaje" 
+                            name="mensaje" 
+                            placeholder="Mensaje" 
+                            required></textarea>
+                    </div>
+
+                    <!-- Botón de envío -->
+                    <button type="submit" class="btn btn-submit">Enviar mensaje</button>
+                    
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</section>
+    
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-logo">MI MUNDO PAPER</div>
+    
+    <ul class="footer-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="reseñas.html">Reseñas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    
+    <div class="footer-bottom">
+        <p>&copy;2025 Mi Mundo Paper — Todos los derechos reservados</p>
+    </div>
+</footer>
+</body>
+</html>
