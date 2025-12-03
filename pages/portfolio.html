@@ -1,116 +1,133 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!--------DESCRIPCIÓN: Galería de trabajos--------->
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Mundo Paper - Portfolio</title>
+    <meta name="description" content="Trabajos realizados de papelería artesanal">
     
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Google Fonts - Fuente Inter -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Archivo de estilos principal -->
+    <!-- Estilos -->
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
-<!--ENCABEZADO / NAVEGACIÓN-->
-<header>
-    <div class="header-container">
-        <!-- Logo del sitio -->
-        <a href="index.html" class="logo">MI MUNDO PAPER</a>
-        
-        <!-- Menú de navegación -->
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="portfolio.html" class="activo">Portfolio</a></li>
-                <li><a href="reseñas.html">Reseñas</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<!--CONTENIDO PRINCIPAL-->
-<main>
-    <!-- Seccion de portfolio -->
-    <section class="portfolio-section">
-        <div class="container">
-            
-            <!-- Titulo de la seccion -->
-            <div class="text-center mb-5">
-                <h2 class="portfolio-title">PORTFOLIO</h2>
-                <p class="portfolio-subtitle">Nuestros trabajos más recientes</p>
-            </div>
-
-            <!-- Grid de proyectos usando Bootstrap -->
-            <div class="row g-4">
-                
-                <!-- Proyecto 1 -->
-                <div class="col-12 col-md-6">
-                    <div class="portfolio-card">
-                        <img src="../assets/32b45d19-71af-427b-8a67-541e29e13230.png" alt="Diseño de libreta con silla roja" class="img-fluid">
-                        <div class="portfolio-card-info">
-                            <h3>Diseño Urbano</h3>
-                            <p>Colección 2025</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyecto 2 -->
-                <div class="col-12 col-md-6">
-                    <div class="portfolio-card">
-                        <img src="../assets/Generated Image November 11, 2025 - 12_17PM.png" alt="Libreta Construct & Deconstruct" class="img-fluid">
-                        <div class="portfolio-card-info">
-                            <h3>Construct & Deconstruct</h3>
-                            <p>Serie conceptual</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyecto 3 -->
-                <div class="col-12">
-                    <div class="portfolio-card">
-                        <img src="../assets/00000000.png" alt="Libreta Every waking moment" class="img-fluid">
-                        <div class="portfolio-card-info">
-                            <h3>Every Waking Moment</h3>
-                            <p>Diseño tipográfico</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="header__contenedor">
+            <a href="index.html" class="header__logo">Mi Mundo Paper</a>
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li><a href="index.html" class="header__enlace">Inicio</a></li>
+                    <li><a href="productos.html" class="header__enlace">Productos</a></li>
+                    <li><a href="portfolio.html" class="header__enlace header__enlace--activo">Portfolio</a></li>
+                    <li><a href="reseñas.html" class="header__enlace">Reseñas</a></li>
+                    <li><a href="contacto.html" class="header__enlace">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
-    </section>
-</main>
+    </header>
 
-<!-- FOOTER -->
-<footer>
-    <div class="footer-logo">MI MUNDO PAPER</div>
-    
-    <ul class="footer-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="productos.html">Productos</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="reseñas.html">Reseñas</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-    
-    <div class="footer-bottom">
-        <p>&copy; 2025 Mi Mundo Paper</p>
-    </div>
-</footer>
+    <!-- Contenido Principal -->
+    <main class="main">
+        
+        <!-- Titulo de Pagina -->
+        <section class="pagina-titulo">
+            <h1 class="pagina-titulo__texto">Portfolio</h1>
+            <p class="pagina-titulo__subtexto">Algunos de nuestros trabajos realizados</p>
+        </section>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Galeria de Trabajos -->
+        <section class="portfolio">
+            <div class="portfolio__grid">
+                
+                <article class="trabajo">
+                    <div class="trabajo__imagen">
+                        <img src="../assets/MARMOL-BLANCO.jpeg" alt="Invitaciones de boda personalizadas">
+                    </div>
+                    <div class="trabajo__info">
+                        <h3 class="trabajo__titulo">Invitaciones de Boda</h3>
+                        <p class="trabajo__descripcion">Set completo de invitaciones para casamiento con diseño floral</p>
+                        <p class="trabajo__categoria">Invitaciones</p>
+                    </div>
+                </article>
+
+                <article class="trabajo">
+                    <div class="trabajo__imagen">
+                        <img src="../assets/MARMOL-BLANCO.jpeg" alt="Cuadernos corporativos personalizados">
+                    </div>
+                    <div class="trabajo__info">
+                        <h3 class="trabajo__titulo">Cuadernos Corporativos</h3>
+                        <p class="trabajo__descripcion">Cuadernos personalizados para empresa de diseño</p>
+                        <p class="trabajo__categoria">Corporativo</p>
+                    </div>
+                </article>
+
+                <article class="trabajo">
+                    <div class="trabajo__imagen">
+                        <img src="../assets/MARMOL-BLANCO.jpeg" alt="Packaging para emprendimiento">
+                    </div>
+                    <div class="trabajo__info">
+                        <h3 class="trabajo__titulo">Packaging Artesanal</h3>
+                        <p class="trabajo__descripcion">Cajas y etiquetas para emprendimiento de velas</p>
+                        <p class="trabajo__categoria">Packaging</p>
+                    </div>
+                </article>
+
+                <article class="trabajo">
+                    <div class="trabajo__imagen">
+                        <img src="../assets/MARMOL-BLANCO.jpeg" alt="Album de fotos artesanal">
+                    </div>
+                    <div class="trabajo__info">
+                        <h3 class="trabajo__titulo">Álbum de Fotos</h3>
+                        <p class="trabajo__descripcion">Álbum personalizado para regalo de aniversario</p>
+                        <p class="trabajo__categoria">Álbumes</p>
+                    </div>
+                </article>
+
+                <article class="trabajo">
+                    <div class="trabajo__imagen">
+                        <img src="../assets/MARMOL-BLANCO.jpeg" alt="Tarjetas de cumpleaños">
+                    </div>
+                    <div class="trabajo__info">
+                        <h3 class="trabajo__titulo">Tarjetas de Cumpleaños</h3>
+                        <p class="trabajo__descripcion">Colección de tarjetas ilustradas para cumpleaños</p>
+                        <p class="trabajo__categoria">Tarjetas</p>
+                    </div>
+                </article>
+
+                <article class="trabajo">
+                    <div class="trabajo__imagen">
+                        <img src="../assets/MARMOL-BLANCO.jpeg" alt="Agenda personalizada">
+                    </div>
+                    <div class="trabajo__info">
+                        <h3 class="trabajo__titulo">Agenda Personalizada</h3>
+                        <p class="trabajo__descripcion">Agenda anual con diseño exclusivo para cliente</p>
+                        <p class="trabajo__categoria">Agendas</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de Pagina -->
+    <footer class="footer">
+        <p class="footer__logo">Mi Mundo Paper</p>
+        <ul class="footer__menu">
+            <li><a href="index.html" class="footer__enlace">Inicio</a></li>
+            <li><a href="productos.html" class="footer__enlace">Productos</a></li>
+            <li><a href="portfolio.html" class="footer__enlace">Portfolio</a></li>
+            <li><a href="reseñas.html" class="footer__enlace">Reseñas</a></li>
+            <li><a href="contacto.html" class="footer__enlace">Contacto</a></li>
+        </ul>
+        <p class="footer__copy">&copy; 2025 Mi Mundo Paper - Todos los derechos reservados</p>
+    </footer>
 
 </body>
 </html>

@@ -1,0 +1,107 @@
+// ============================================
+// MIXINS
+// ============================================
+
+// Flexbox centrado
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Flexbox entre elementos
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// Transicion simple
+@mixin transicion($propiedad: all) {
+    transition: $propiedad 0.3s ease;
+}
+
+// Transicion con transformacion
+@mixin transicion-transform {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+// Media query tablet
+@mixin tablet {
+    @media (max-width: $tablet) {
+        @content;
+    }
+}
+
+// Media query mobile
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+// Boton base con transicion
+@mixin boton {
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: $fuente-sm;
+    font-weight: $peso-medio;
+    border-radius: $radio-sm;
+    border: none;
+    cursor: pointer;
+    @include transicion(all);
+    
+    &:hover {
+        transform: translateY(-2px);
+    }
+}
+
+// Tarjeta base con hover
+@mixin tarjeta {
+    background-color: $color-blanco;
+    border-radius: $radio-md;
+    overflow: hidden;
+    @include transicion-transform;
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+}
+
+// Titulo de seccion
+@mixin titulo-seccion {
+    font-size: $fuente-3xl;
+    font-weight: $peso-bold;
+    color: $color-primario;
+    margin-bottom: $espacio-3xl;
+    
+    @include tablet {
+        font-size: $fuente-2xl;
+    }
+}
+
+// Efecto hover en enlaces
+@mixin enlace-hover {
+    position: relative;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: $color-secundario;
+        @include transicion(width);
+    }
+    
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+// Sombra suave
+@mixin sombra {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}

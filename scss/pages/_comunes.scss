@@ -1,0 +1,25 @@
+// ============================================
+// ESTILOS COMUNES DE PAGINAS
+// ============================================
+
+.pagina-titulo {
+    text-align: center;
+    padding: $espacio-3xl 0;
+    margin-bottom: $espacio-3xl;
+    
+    &__texto {
+        font-size: $fuente-4xl;
+        font-weight: $peso-bold;
+        color: $color-primario;
+        margin-bottom: $espacio-sm;
+        
+        @include mobile {
+            font-size: $fuente-3xl;
+        }
+    }
+    
+    &__subtexto {
+        font-size: $fuente-md;
+        color: $color-texto-claro;
+    }
+}

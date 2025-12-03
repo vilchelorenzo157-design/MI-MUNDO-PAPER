@@ -1,0 +1,31 @@
+// ============================================
+// RESET
+// ============================================
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fuente-principal;
+    font-size: $fuente-base;
+    line-height: 1.6;
+    color: $color-texto;
+    background-color: $color-fondo;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}

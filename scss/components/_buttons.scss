@@ -1,0 +1,40 @@
+// ============================================
+// BOTONES
+// ============================================
+
+.hero__boton,
+.contacto-home__boton,
+.formulario__boton {
+    @include boton;
+}
+
+.hero__boton {
+    background-color: $color-primario;
+    color: $color-blanco;
+    
+    &:hover {
+        background-color: $color-secundario;
+        box-shadow: 0 5px 20px rgba($color-secundario, 0.3);
+    }
+}
+
+.contacto-home__boton {
+    background-color: $color-blanco;
+    color: $color-primario;
+    
+    &:hover {
+        background-color: $color-secundario;
+        color: $color-blanco;
+        box-shadow: 0 5px 20px rgba($color-secundario, 0.3);
+    }
+}
+
+.formulario__boton {
+    background-color: $color-primario;
+    color: $color-blanco;
+    
+    &:hover {
+        background-color: $color-secundario;
+        box-shadow: 0 5px 20px rgba($color-secundario, 0.3);
+    }
+}

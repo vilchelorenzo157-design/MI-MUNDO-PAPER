@@ -1,0 +1,57 @@
+// ============================================
+// PAGINA CONTACTO
+// ============================================
+
+.contacto {
+    
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $espacio-5xl;
+        
+        @include tablet {
+            grid-template-columns: 1fr;
+            gap: $espacio-3xl;
+        }
+    }
+    
+    &__titulo {
+        font-size: $fuente-xl;
+        font-weight: $peso-bold;
+        color: $color-primario;
+        margin-bottom: $espacio-xl;
+    }
+    
+    &__dato {
+        margin-bottom: $espacio-xl;
+    }
+    
+    &__subtitulo {
+        font-size: $fuente-sm;
+        font-weight: $peso-bold;
+        color: $color-primario;
+        margin-bottom: $espacio-xs;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    
+    &__texto {
+        font-size: $fuente-base;
+        color: $color-texto-claro;
+    }
+    
+    &__redes {
+        display: flex;
+        gap: $espacio-md;
+    }
+    
+    &__red {
+        font-size: 15px;
+        color: $color-texto-claro;
+        @include transicion(color);
+        
+        &:hover {
+            color: $color-secundario;
+        }
+    }
+}

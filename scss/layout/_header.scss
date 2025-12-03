@@ -1,0 +1,62 @@
+// ============================================
+// HEADER
+// ============================================
+
+.header {
+    background-color: $color-blanco;
+    padding: $espacio-lg 0;
+    border-bottom: 1px solid $color-borde;
+    
+    &__contenedor {
+        max-width: $ancho-maximo;
+        margin: 0 auto;
+        padding: 0 $espacio-lg;
+        @include flex-between;
+        
+        @include tablet {
+            flex-direction: column;
+            gap: $espacio-md;
+        }
+    }
+    
+    &__logo {
+        font-size: $fuente-md;
+        font-weight: $peso-bold;
+        color: $color-primario;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        @include transicion(color);
+        
+        &:hover {
+            color: $color-secundario;
+        }
+    }
+    
+    &__menu {
+        display: flex;
+        gap: $espacio-2xl;
+        
+        @include tablet {
+            gap: $espacio-lg;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    
+    &__enlace {
+        font-size: $fuente-sm;
+        color: $color-texto-claro;
+        text-transform: lowercase;
+        @include transicion(color);
+        @include enlace-hover;
+        
+        &:hover {
+            color: $color-primario;
+        }
+        
+        &--activo {
+            color: $color-primario;
+            font-weight: $peso-medio;
+        }
+    }
+}

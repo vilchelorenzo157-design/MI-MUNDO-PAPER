@@ -1,0 +1,42 @@
+// ============================================
+// FORMULARIOS
+// ============================================
+
+.formulario {
+    
+    &__campo {
+        margin-bottom: $espacio-lg;
+    }
+    
+    &__label {
+        display: block;
+        font-size: $fuente-sm;
+        font-weight: $peso-medio;
+        color: $color-primario;
+        margin-bottom: $espacio-xs;
+    }
+    
+    &__input,
+    &__textarea {
+        width: 100%;
+        padding: $espacio-sm $espacio-md;
+        font-size: 15px;
+        font-family: inherit;
+        border: 1px solid $color-borde;
+        border-radius: $radio-sm;
+        background-color: $color-blanco;
+        @include transicion(all);
+        
+        &:focus {
+            outline: none;
+            border-color: $color-secundario;
+            box-shadow: 0 0 0 3px rgba($color-secundario, 0.1);
+            transform: translateY(-1px);
+        }
+    }
+    
+    &__textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+}
