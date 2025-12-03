@@ -1,62 +1,136 @@
 // ============================================
-// HEADER
+// LAYOUT - HEADER
 // ============================================
 
 .header {
-    background-color: $color-blanco;
-    padding: $espacio-lg 0;
-    border-bottom: 1px solid $color-borde;
-    
-    &__contenedor {
-        max-width: $ancho-maximo;
-        margin: 0 auto;
-        padding: 0 $espacio-lg;
-        @include flex-between;
-        
-        @include tablet {
-            flex-direction: column;
-            gap: $espacio-md;
-        }
+  background-color: $color-white;
+  padding: $spacing-lg 0;
+  border-bottom: 1px solid $color-neutral-border;
+  position: sticky;
+  top: 0;
+  z-index: $z-index-sticky;
+  box-shadow: $shadow-sm;
+
+  &__contenedor {
+    @include container;
+    @include flex-between;
+    gap: $spacing-lg;
+
+    @include media-md {
+      flex-wrap: wrap;
     }
-    
-    &__logo {
-        font-size: $fuente-md;
-        font-weight: $peso-bold;
-        color: $color-primario;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        @include transicion(color);
-        
-        &:hover {
-            color: $color-secundario;
-        }
+  }
+
+  &__logo {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semibold;
+    color: $color-neutral-dark;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    @include transicion(color);
+
+    &:hover {
+      color: $color-primary;
     }
-    
-    &__menu {
-        display: flex;
-        gap: $espacio-2xl;
-        
-        @include tablet {
-            gap: $espacio-lg;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+  }
+
+  &__nav {
+    @include media-max-md {
+      display: none;
     }
-    
-    &__enlace {
-        font-size: $fuente-sm;
-        color: $color-texto-claro;
-        text-transform: lowercase;
-        @include transicion(color);
-        @include enlace-hover;
-        
-        &:hover {
-            color: $color-primario;
-        }
-        
-        &--activo {
-            color: $color-primario;
-            font-weight: $peso-medio;
-        }
+  }
+
+  &__menu {
+    @include flex-between;
+    gap: $spacing-lg;
+    list-style: none;
+
+    @include media-md {
+      gap: $spacing-md;
     }
+
+    @include media-sm {
+      gap: $spacing-sm;
+    }
+  }
+
+  &__enlace {
+    font-size: $font-size-sm;
+    color: $color-text;
+    text-transform: lowercase;
+    @include enlace-hover;
+
+    &--activo {
+      color: $color-primary;
+      font-weight: $font-weight-semibold;
+    }
+  }
+}
+
+// ============================================
+// LAYOUT - MAIN
+// ============================================
+
+.main {
+  @include container;
+  padding-top: $spacing-2xl;
+  padding-bottom: $spacing-2xl;
+
+  @include media-md {
+    padding-top: $spacing-xl;
+    padding-bottom: $spacing-xl;
+  }
+}
+
+// ============================================
+// LAYOUT - FOOTER
+// ============================================
+
+.footer {
+  background-color: $color-neutral-dark;
+  color: $color-white;
+  padding: $spacing-2xl $container-padding;
+  margin-top: $spacing-3xl;
+
+  @include media-md {
+    padding: $spacing-xl $spacing-lg;
+  }
+
+  &__logo {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $spacing-lg;
+    display: block;
+  }
+
+  &__menu {
+    @include flex-center;
+    gap: $spacing-lg;
+    flex-wrap: wrap;
+    margin-bottom: $spacing-xl;
+    justify-content: flex-start;
+
+    @include media-md {
+      gap: $spacing-md;
+    }
+  }
+
+  &__enlace {
+    font-size: $font-size-sm;
+    color: #cccccc;
+    @include transicion(color);
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__copy {
+    font-size: $font-size-sm;
+    color: #999999;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: $spacing-lg;
+    margin-top: $spacing-lg;
+  }
 }

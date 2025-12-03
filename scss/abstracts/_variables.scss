@@ -1,24 +1,54 @@
 // ============================================
-// VARIABLES
+// VARIABLES - SCSS
 // ============================================
 
-// Colores
-$color-primario: #1a1a1a;
-$color-secundario: #c9a66b;
-$color-texto: #333333;
+// --- COLORES ---
+$color-primary: #c9a66b;      // Dorado principal
+$color-primary-dark: #a68352; // Dorado oscuro
+$color-primary-light: #e6c9a0; // Dorado claro
+
+$color-neutral-dark: #1a1a1a;  // Negro/Gris oscuro
+$color-neutral-medium: #333333; // Gris medio
+$color-neutral-light: #fafafa;  // Blanco hueso
+$color-neutral-border: #e0e0e0; // Borde gris claro
+
+$color-white: #ffffff;
+$color-text: #333333;
+$color-background: #fafafa;
+
+// Colores para estados
+$color-success: #4caf50;
+$color-error: #f44336;
+$color-warning: #ff9800;
+$color-info: #2196f3;
+
+// Variables heredadas (compatibilidad)
+$color-primario: $color-neutral-dark;
+$color-secundario: $color-primary;
+$color-texto: $color-text;
 $color-texto-claro: #666666;
 $color-texto-gris: #999999;
-$color-fondo: #fafafa;
-$color-blanco: #ffffff;
-$color-borde: #e0e0e0;
+$color-fondo: $color-background;
+$color-blanco: $color-white;
+$color-borde: $color-neutral-border;
 
-// Tipografia
-$fuente-principal: 'Inter', Arial, sans-serif;
-$peso-normal: 400;
-$peso-medio: 500;
-$peso-bold: 600;
+// --- TIPOGRAFÍA ---
+$font-primary: 'Inter', Arial, sans-serif;
+$font-secondary: 'Georgia', serif;
 
-// Tamaños de fuente
+$fuente-principal: $font-primary;
+
+// Tamaños de fuente (nuevos estándares)
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+$font-size-2xl: 24px;
+$font-size-3xl: 32px;
+$font-size-4xl: 40px;
+
+// Tamaños heredados (compatibilidad)
 $fuente-xs: 13px;
 $fuente-sm: 14px;
 $fuente-base: 16px;
@@ -30,25 +60,84 @@ $fuente-3xl: 32px;
 $fuente-4xl: 40px;
 $fuente-5xl: 48px;
 
-// Espaciado
-$espacio-xs: 8px;
-$espacio-sm: 12px;
-$espacio-md: 16px;
+// Pesos de fuente
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$peso-normal: $font-weight-regular;
+$peso-medio: $font-weight-medium;
+$peso-bold: $font-weight-semibold;
+
+// Alturas de línea
+$line-height-tight: 1.2;
+$line-height-normal: 1.6;
+$line-height-relaxed: 1.8;
+
+// --- ESPACIADO ---
+$spacing-xs: 8px;
+$spacing-sm: 12px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-2xl: 48px;
+$spacing-3xl: 64px;
+
+// Espaciado heredado (compatibilidad)
+$espacio-xs: $spacing-xs;
+$espacio-sm: $spacing-sm;
+$espacio-md: $spacing-md;
 $espacio-lg: 20px;
-$espacio-xl: 24px;
+$espacio-xl: $spacing-lg;
 $espacio-2xl: 30px;
 $espacio-3xl: 40px;
 $espacio-4xl: 50px;
 $espacio-5xl: 60px;
 
-// Contenedor
-$ancho-maximo: 1200px;
+// --- BORDES ---
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-full: 50%;
 
-// Border radius
 $radio-sm: 6px;
 $radio-md: 8px;
 $radio-lg: 12px;
 
-// Breakpoints
-$tablet: 768px;
-$mobile: 480px;
+$border-width: 1px;
+$border-color: $color-neutral-border;
+
+// --- SOMBRAS ---
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+
+// --- TRANSICIONES ---
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// --- BREAKPOINTS (Mobile-First) ---
+$breakpoint-sm: 480px;   // Teléfono pequeño
+$breakpoint-md: 768px;   // Tablet
+$breakpoint-lg: 1024px;  // Desktop pequeño
+$breakpoint-xl: 1200px;  // Desktop estándar
+$breakpoint-2xl: 1440px; // Desktop grande
+
+// Breakpoints heredados (compatibilidad)
+$tablet: $breakpoint-md;
+$mobile: $breakpoint-sm;
+
+// --- CONTENEDORES ---
+$container-max-width: 1200px;
+$container-padding: 20px;
+$ancho-maximo: $container-max-width;
+
+// --- Z-INDEX ---
+$z-index-dropdown: 100;
+$z-index-sticky: 200;
+$z-index-fixed: 300;
+$z-index-modal: 400;
+$z-index-tooltip: 500;

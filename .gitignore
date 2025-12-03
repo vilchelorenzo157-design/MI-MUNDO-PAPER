@@ -1,0 +1,30 @@
+# Node modules
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Compiladores
+*.map
+.sass-cache/
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+Thumbs.db
+.env
+.env.local
+
+# Build files
+dist/
+build/
+temp/
+
+# Logs
+logs/
+*.log
