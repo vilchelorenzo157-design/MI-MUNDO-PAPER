@@ -1,0 +1,26 @@
+{
+  "name": "mi-mundo-paper",
+  "version": "3.0.0",
+  "description": "Sitio web de papelería artesanal - Proyecto educativo con HTML, CSS y SCSS",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch scss:.",
+    "sass:compile": "sass scss/main.scss styles.css",
+    "sass:minify": "sass --style=compressed scss/main.scss styles.css",
+    "dev": "sass --watch scss:. --poll",
+    "build": "sass --style=compressed scss/main.scss styles.css"
+  },
+  "keywords": [
+    "papelería",
+    "artesanal",
+    "HTML",
+    "CSS",
+    "SCSS",
+    "responsive"
+  ],
+  "author": "Lorenzo Vilche",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}

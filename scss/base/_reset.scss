@@ -1,0 +1,151 @@
+// ============================================
+// RESET - Estilos base normalizados
+// ============================================
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  line-height: $line-height-normal;
+  color: $color-text;
+  background-color: $color-background;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Elementos de texto
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+// Listas
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+// Enlaces
+a {
+  color: inherit;
+  text-decoration: none;
+  @include transicion(color);
+
+  &:focus-visible {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+}
+
+// Imágenes
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Formularios
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  border: none;
+  background-color: transparent;
+}
+
+textarea {
+  resize: vertical;
+}
+
+// Tablas
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Bloque de código
+code,
+pre {
+  font-family: 'Courier New', monospace;
+}
+
+// Negrita y énfasis
+strong {
+  font-weight: $font-weight-bold;
+}
+
+em {
+  font-style: italic;
+}
+
+// Marca y eliminación
+mark {
+  background-color: yellow;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+// Línea horizontal
+hr {
+  border: none;
+  border-top: 1px solid $color-neutral-border;
+  margin: $spacing-lg 0;
+}
+
+// Abbr
+abbr[title] {
+  text-decoration: underline;
+  cursor: help;
+}
+
+// Blockquote
+blockquote {
+  margin: $spacing-lg 0;
+  padding-left: $spacing-lg;
+  border-left: 4px solid $color-primary;
+  font-style: italic;
+  color: $color-neutral-medium;
+}

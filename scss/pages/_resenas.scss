@@ -1,0 +1,16 @@
+// ============================================
+// PAGINA RESEÑAS
+// ============================================
+
+.resenas {
+    
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $espacio-2xl;
+        
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
+    }
+}
