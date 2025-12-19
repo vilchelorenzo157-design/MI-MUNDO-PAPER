@@ -147,6 +147,18 @@
   }
 }
 
+@mixin button-base {
+  display: inline-block;
+  padding: $spacing-sm $spacing-lg;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  text-align: center;
+  border: none;
+  border-radius: $border-radius-md;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
 // --- TARJETAS ---
 @mixin tarjeta {
   background-color: $color-white;
@@ -198,9 +210,19 @@
   }
 }
 
+@mixin link-base {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
 // --- SOMBRAS ---
-@mixin sombra {
-  box-shadow: $shadow-md;
+@mixin shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 // --- CONTENEDORES ---

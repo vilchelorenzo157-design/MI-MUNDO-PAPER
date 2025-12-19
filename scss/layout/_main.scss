@@ -6,4 +6,7 @@
     max-width: $ancho-maximo;
     margin: 0 auto;
     padding: $espacio-3xl $espacio-lg;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $espacio-lg;
 }
