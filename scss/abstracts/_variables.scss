@@ -141,3 +141,6 @@ $z-index-sticky: 200;
 $z-index-fixed: 300;
 $z-index-modal: 400;
 $z-index-tooltip: 500;
+
+// Exponer variables globalmente
+@forward 'variables';
