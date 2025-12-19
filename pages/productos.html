@@ -3,13 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Mundo Paper - Productos</title>
-    <meta name="description" content="Catálogo de productos artesanales de papelería">
+    
+    <!-- SEO -->
+    <title>Productos | Mi Mundo Paper - Papelería Artesanal</title>
+    <meta name="description" content="Catálogo de productos de papelería artesanal: cuadernos, tarjetas, agendas, cajas de regalo y más.">
+    <meta name="keywords" content="cuadernos artesanales, tarjetas personalizadas, agendas, packaging, papelería">
+    <meta name="author" content="Mi Mundo Paper">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Productos | Mi Mundo Paper">
+    <meta property="og:description" content="Descubrí nuestra variedad de papelería artesanal hecha a mano.">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Estilos -->
     <link rel="stylesheet" href="../styles.css">
@@ -17,40 +33,45 @@
 <body>
 
     <!-- Encabezado -->
-    <header class="header">
-        <div class="header__contenedor">
-            <a href="index.html" class="header__logo">Mi Mundo Paper</a>
-            <nav class="header__nav">
-                <ul class="header__menu">
-                    <li><a href="index.html" class="header__enlace">Inicio</a></li>
-                    <li><a href="productos.html" class="header__enlace header__enlace--activo">Productos</a></li>
-                    <li><a href="portfolio.html" class="header__enlace">Portfolio</a></li>
-                    <li><a href="reseñas.html" class="header__enlace">Reseñas</a></li>
-                    <li><a href="contacto.html" class="header__enlace">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="header" role="banner">
+        <nav class="navbar navbar-expand-lg" aria-label="Navegación principal">
+            <div class="container">
+                <a href="../index.html" class="navbar-brand header__logo" aria-label="Mi Mundo Paper - Inicio">Mi Mundo Paper</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item"><a href="productos.html" class="nav-link active" aria-current="page">Productos</a></li>
+                        <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                        <li class="nav-item"><a href="reseñas.html" class="nav-link">Reseñas</a></li>
+                        <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <!-- Contenido Principal -->
-    <main class="main">
+    <main class="main" role="main">
         
-        <!-- Titulo de Pagina -->
-        <section class="pagina-titulo">
-            <h1 class="pagina-titulo__texto">Productos</h1>
-            <p class="pagina-titulo__subtexto">Nuestro catálogo de papelería artesanal</p>
+        <!-- Titulo -->
+        <section class="pagina-titulo" aria-labelledby="pagina-titulo">
+            <h1 id="pagina-titulo" class="pagina-titulo__texto">Nuestros Productos</h1>
+            <p class="pagina-titulo__subtexto">Descubrí nuestra variedad de papelería artesanal</p>
         </section>
 
-        <!-- Galeria de Productos -->
-        <section class="productos">
+        <!-- Productos -->
+        <section class="productos" aria-label="Lista de productos">
             <div class="productos__grid">
                 
                 <article class="producto">
                     <div class="producto__imagen">
-                        <img src="../assets/marca.jfif" alt="Cuaderno artesanal tapa dura">
+                        <img src="../assets/marca.jfif" alt="Cuaderno artesanal con tapa dura forrada en tela" loading="lazy">
                     </div>
                     <div class="producto__info">
-                        <h3 class="producto__nombre">Cuaderno Tapa Dura</h3>
+                        <h2 class="producto__nombre">Cuaderno Tapa Dura</h2>
                         <p class="producto__descripcion">Cuaderno A5 con tapa dura forrada en tela</p>
                         <p class="producto__precio">$2.500</p>
                     </div>
@@ -58,10 +79,10 @@
 
                 <article class="producto">
                     <div class="producto__imagen">
-                        <img src="../assets/lillll.jfif" alt="Cuaderno artesanal cosido">
+                        <img src="../assets/marca.jfif" alt="Cuaderno con encuadernación japonesa cosida a mano" loading="lazy">
                     </div>
                     <div class="producto__info">
-                        <h3 class="producto__nombre">Cuaderno Cosido</h3>
+                        <h2 class="producto__nombre">Cuaderno Cosido</h2>
                         <p class="producto__descripcion">Cuaderno con encuadernación japonesa</p>
                         <p class="producto__precio">$1.800</p>
                     </div>
@@ -69,10 +90,10 @@
 
                 <article class="producto">
                     <div class="producto__imagen">
-                        <img src="../assets/sisisisis.jfif" alt="Set de tarjetas artesanales">
+                        <img src="../assets/marca.jfif" alt="Set de 10 tarjetas artesanales con sobres" loading="lazy">
                     </div>
                     <div class="producto__info">
-                        <h3 class="producto__nombre">Set de Tarjetas</h3>
+                        <h2 class="producto__nombre">Set de Tarjetas</h2>
                         <p class="producto__descripcion">Pack de 10 tarjetas con sobres</p>
                         <p class="producto__precio">$1.200</p>
                     </div>
@@ -80,10 +101,10 @@
 
                 <article class="producto">
                     <div class="producto__imagen">
-                        <img src="../assets/marca.jfif" alt="Caja de regalo artesanal">
+                        <img src="../assets/marca.jfif" alt="Caja de regalo decorativa artesanal" loading="lazy">
                     </div>
                     <div class="producto__info">
-                        <h3 class="producto__nombre">Caja Regalo</h3>
+                        <h2 class="producto__nombre">Caja Regalo</h2>
                         <p class="producto__descripcion">Caja decorativa para regalos especiales</p>
                         <p class="producto__precio">$900</p>
                     </div>
@@ -91,10 +112,10 @@
 
                 <article class="producto">
                     <div class="producto__imagen">
-                        <img src="../assets/lillll.jfif" alt="Agenda personalizada">
+                        <img src="../assets/marca.jfif" alt="Agenda 2025 con diseño personalizado" loading="lazy">
                     </div>
                     <div class="producto__info">
-                        <h3 class="producto__nombre">Agenda 2025</h3>
+                        <h2 class="producto__nombre">Agenda 2025</h2>
                         <p class="producto__descripcion">Agenda anual con diseño personalizado</p>
                         <p class="producto__precio">$3.500</p>
                     </div>
@@ -102,10 +123,10 @@
 
                 <article class="producto">
                     <div class="producto__imagen">
-                        <img src="../assets/sisisisis.jfif" alt="Marcadores de libro artesanales">
+                        <img src="../assets/marca.jfif" alt="Set de 5 marcadores de libro ilustrados" loading="lazy">
                     </div>
                     <div class="producto__info">
-                        <h3 class="producto__nombre">Marcadores</h3>
+                        <h2 class="producto__nombre">Marcadores</h2>
                         <p class="producto__descripcion">Set de 5 marcadores ilustrados</p>
                         <p class="producto__precio">$600</p>
                     </div>
@@ -116,18 +137,22 @@
 
     </main>
 
-    <!-- Pie de Pagina -->
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
         <p class="footer__logo">Mi Mundo Paper</p>
-        <ul class="footer__menu">
-            <li><a href="index.html" class="footer__enlace">Inicio</a></li>
-            <li><a href="productos.html" class="footer__enlace">Productos</a></li>
-            <li><a href="portfolio.html" class="footer__enlace">Portfolio</a></li>
-            <li><a href="reseñas.html" class="footer__enlace">Reseñas</a></li>
-            <li><a href="contacto.html" class="footer__enlace">Contacto</a></li>
-        </ul>
+        <nav aria-label="Enlaces del pie de página">
+            <ul class="footer__menu">
+                <li><a href="index.html" class="footer__enlace">Inicio</a></li>
+                <li><a href="productos.html" class="footer__enlace">Productos</a></li>
+                <li><a href="portfolio.html" class="footer__enlace">Portfolio</a></li>
+                <li><a href="reseñas.html" class="footer__enlace">Reseñas</a></li>
+                <li><a href="contacto.html" class="footer__enlace">Contacto</a></li>
+            </ul>
+        </nav>
         <p class="footer__copy">&copy; 2025 Mi Mundo Paper - Todos los derechos reservados</p>
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

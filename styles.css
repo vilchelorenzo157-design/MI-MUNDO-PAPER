@@ -26,6 +26,7 @@ img {
 a {
     text-decoration: none;
     color: inherit;
+    transition: color 0.3s ease;
 }
 
 ul {
@@ -47,42 +48,17 @@ ul {
     }
 }
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.fade-in {
-    animation: fadeIn 0.6s ease-out;
-}
-
-.slide-in {
-    animation: slideIn 0.6s ease-out;
-}
-
 /* ============================================
-   HEADER
+   HEADER CON BOOTSTRAP NAVBAR
    ============================================ */
 
 .header {
     background-color: #ffffff;
-    padding: 20px 0;
     border-bottom: 1px solid #e0e0e0;
 }
 
-.header__contenedor {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header .navbar {
+    padding: 20px 0;
 }
 
 .header__logo {
@@ -98,41 +74,29 @@ ul {
     color: #c9a66b;
 }
 
-.header__menu {
-    display: flex;
-    gap: 30px;
-}
-
-.header__enlace {
+.header .nav-link {
     font-size: 14px;
     color: #666666;
     text-transform: lowercase;
+    padding: 8px 16px;
     transition: color 0.3s ease;
-    position: relative;
 }
 
-.header__enlace::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background-color: #c9a66b;
-    transition: width 0.3s ease;
-}
-
-.header__enlace:hover::after {
-    width: 100%;
-}
-
-.header__enlace:hover {
+.header .nav-link:hover {
     color: #1a1a1a;
 }
 
-.header__enlace--activo {
+.header .nav-link.active {
     color: #1a1a1a;
     font-weight: 500;
+}
+
+.header .navbar-toggler {
+    border-color: #e0e0e0;
+}
+
+.header .navbar-toggler:focus {
+    box-shadow: none;
 }
 
 /* ============================================
@@ -156,10 +120,6 @@ ul {
     align-items: center;
     margin-bottom: 60px;
     animation: fadeIn 0.8s ease-out;
-}
-
-.hero__contenido {
-    animation: slideIn 0.8s ease-out;
 }
 
 .hero__titulo {
@@ -191,7 +151,6 @@ ul {
 .hero__boton:hover {
     background-color: #c9a66b;
     transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(201, 166, 107, 0.3);
 }
 
 .hero__imagen img {
@@ -311,7 +270,6 @@ ul {
     background-color: #c9a66b;
     color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(201, 166, 107, 0.3);
 }
 
 /* ============================================
@@ -357,10 +315,6 @@ ul {
 .producto:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.producto__imagen {
-    overflow: hidden;
 }
 
 .producto__imagen img {
@@ -419,10 +373,6 @@ ul {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.trabajo__imagen {
-    overflow: hidden;
-}
-
 .trabajo__imagen img {
     width: 100%;
     height: 250px;
@@ -474,13 +424,12 @@ ul {
     background-color: #ffffff;
     border-radius: 8px;
     padding: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .resena:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .resena__texto {
@@ -578,7 +527,7 @@ ul {
     border: 1px solid #e0e0e0;
     border-radius: 6px;
     background-color: #ffffff;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .formulario__input:focus,
@@ -586,7 +535,6 @@ ul {
     outline: none;
     border-color: #c9a66b;
     box-shadow: 0 0 0 3px rgba(201, 166, 107, 0.1);
-    transform: translateY(-1px);
 }
 
 .formulario__textarea {
@@ -610,7 +558,6 @@ ul {
 .formulario__boton:hover {
     background-color: #c9a66b;
     transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(201, 166, 107, 0.3);
 }
 
 /* ============================================
@@ -660,17 +607,6 @@ ul {
    ============================================ */
 
 @media (max-width: 768px) {
-    
-    .header__contenedor {
-        flex-direction: column;
-        gap: 16px;
-    }
-    
-    .header__menu {
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
     
     .hero {
         grid-template-columns: 1fr;
