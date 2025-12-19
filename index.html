@@ -5,27 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio | Mi Mundo Paper</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="pages/productos.html">Productos</a></li>
-                <li><a href="pages/portfolio.html">Portfolio</a></li>
-                <li><a href="pages/reseñas.html">Reseñas</a></li>
-                <li><a href="pages/contacto.html">Contacto</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Mi Mundo Paper</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/productos.html">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/reseñas.html">Reseñas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    <main>
+    <main class="container mt-4">
         <section>
-            <h1>Bienvenidos a Mi Mundo Paper</h1>
-            <p>Descubre nuestra papelería artesanal hecha a mano.</p>
+            <h1 class="text-center">Bienvenidos a Mi Mundo Paper</h1>
+            <p class="lead text-center">Descubre nuestra papelería artesanal hecha a mano.</p>
         </section>
     </main>
-    <footer>
+    <footer class="bg-light text-center py-3">
         <p>&copy; 2025 Mi Mundo Paper</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
