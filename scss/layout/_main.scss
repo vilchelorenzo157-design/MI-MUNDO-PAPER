@@ -9,4 +9,12 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: $espacio-lg;
+
+    @include media-md {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+
+    @include media-lg {
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    }
 }

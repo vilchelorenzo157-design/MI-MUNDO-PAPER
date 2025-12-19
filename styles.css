@@ -320,6 +320,16 @@ pre code {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
+@media (min-width: 768px) {
+  .main {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .main {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+}
 
 .footer {
   background-color: #1a1a1a;
