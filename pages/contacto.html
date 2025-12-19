@@ -3,146 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO -->
-    <title>Contacto | Mi Mundo Paper - Escribinos</title>
-    <meta name="description" content="Contactanos para consultas sobre papelería artesanal, pedidos personalizados o presupuestos.">
-    <meta name="keywords" content="contacto papelería, pedidos personalizados, presupuesto papelería artesanal">
-    <meta name="author" content="Mi Mundo Paper">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Contacto | Mi Mundo Paper">
-    <meta property="og:description" content="Escribinos para consultas sobre papelería artesanal.">
-    <meta property="og:type" content="website">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Estilos -->
+    <title>Contacto | Mi Mundo Paper</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-
-    <!-- Encabezado -->
-    <header class="header" role="banner">
-        <nav class="navbar navbar-expand-lg" aria-label="Navegación principal">
-            <div class="container">
-                <a href="../index.html" class="navbar-brand header__logo" aria-label="Mi Mundo Paper - Inicio">Mi Mundo Paper</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="menuPrincipal">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
-                        <li class="nav-item"><a href="productos.html" class="nav-link">Productos</a></li>
-                        <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                        <li class="nav-item"><a href="reseñas.html" class="nav-link">Reseñas</a></li>
-                        <li class="nav-item"><a href="contacto.html" class="nav-link active" aria-current="page">Contacto</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Contenido Principal -->
-    <main class="main" role="main">
-        
-        <!-- Titulo -->
-        <section class="pagina-titulo" aria-labelledby="pagina-titulo">
-            <h1 id="pagina-titulo" class="pagina-titulo__texto">Contacto</h1>
-            <p class="pagina-titulo__subtexto">Escribinos y te respondemos a la brevedad</p>
-        </section>
-
-        <!-- Contacto -->
-        <section class="contacto" aria-label="Información de contacto y formulario">
-            <div class="contacto__grid">
-                
-                <!-- Info -->
-                <div class="contacto__info">
-                    <h2 class="contacto__titulo">Información</h2>
-                    
-                    <div class="contacto__dato">
-                        <h3 class="contacto__subtitulo">Email</h3>
-                        <p class="contacto__texto">
-                            <a href="mailto:hola@mimundopaper.com" aria-label="Enviar email a Mi Mundo Paper">hola@mimundopaper.com</a>
-                        </p>
-                    </div>
-                    
-                    <div class="contacto__dato">
-                        <h3 class="contacto__subtitulo">Redes Sociales</h3>
-                        <ul class="contacto__redes">
-                            <li>
-                                <a href="https://www.instagram.com/mimundo_paper/" target="_blank" rel="noopener noreferrer" class="contacto__red" aria-label="Seguinos en Instagram">
-                                    Instagram
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="contacto__dato">
-                        <h3 class="contacto__subtitulo">Horario</h3>
-                        <p class="contacto__texto">Lunes a Viernes de 9 a 18hs</p>
-                    </div>
-                </div>
-
-                <!-- Formulario -->
-                <div class="contacto__formulario">
-                    <h2 class="contacto__titulo">Envianos un mensaje</h2>
-                    <form class="formulario" action="#" method="POST" aria-label="Formulario de contacto">
-                        <div class="formulario__campo">
-                            <label for="nombre" class="formulario__label">Nombre</label>
-                            <input type="text" id="nombre" name="nombre" class="formulario__input" placeholder="Tu nombre" required aria-required="true">
-                        </div>
-                        
-                        <div class="formulario__campo">
-                            <label for="email" class="formulario__label">Email</label>
-                            <input type="email" id="email" name="email" class="formulario__input" placeholder="Tu email" required aria-required="true">
-                        </div>
-                        
-                        <div class="formulario__campo">
-                            <label for="asunto" class="formulario__label">Asunto</label>
-                            <input type="text" id="asunto" name="asunto" class="formulario__input" placeholder="Asunto del mensaje">
-                        </div>
-                        
-                        <div class="formulario__campo">
-                            <label for="mensaje" class="formulario__label">Mensaje</label>
-                            <textarea id="mensaje" name="mensaje" class="formulario__textarea" placeholder="Escribí tu mensaje" required aria-required="true"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="formulario__boton">Enviar Mensaje</button>
-                    </form>
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <p class="footer__logo">Mi Mundo Paper</p>
-        <nav aria-label="Enlaces del pie de página">
-            <ul class="footer__menu">
-                <li><a href="../index.html" class="footer__enlace">Inicio</a></li>
-                <li><a href="productos.html" class="footer__enlace">Productos</a></li>
-                <li><a href="portfolio.html" class="footer__enlace">Portfolio</a></li>
-                <li><a href="reseñas.html" class="footer__enlace">Reseñas</a></li>
-                <li><a href="contacto.html" class="footer__enlace">Contacto</a></li>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="reseñas.html">Reseñas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <p class="footer__copy">&copy; 2025 Mi Mundo Paper - Todos los derechos reservados</p>
+    </header>
+    <main>
+        <section>
+            <h1>Contacto</h1>
+            <p>Escríbenos para más información.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Mi Mundo Paper</p>
     </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

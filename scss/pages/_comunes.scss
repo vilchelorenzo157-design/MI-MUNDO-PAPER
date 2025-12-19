@@ -6,6 +6,7 @@
     text-align: center;
     padding: $espacio-3xl 0;
     margin-bottom: $espacio-3xl;
+    animation: fadeIn 0.6s ease-out;
     
     &__texto {
         font-size: $fuente-4xl;
