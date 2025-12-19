@@ -3,28 +3,27 @@
 // ============================================
 
 // Abstracts
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
+@use 'abstracts/variables' as *;
 
 // Base
-@import 'base/reset';
-@import 'base/typography';
-@import 'base/animations';
+@use 'base/reset' as *;
+@use 'base/typography' as *;
+@use 'base/animations' as *;
 
 // Layout
-@import 'layout/header';
-@import 'layout/main';
-@import 'layout/footer';
+@use 'layout/header' as *;
+@use 'layout/main' as *;
+@use 'layout/footer' as *;
 
 // Components
-@import 'components/buttons';
-@import 'components/cards';
-@import 'components/forms';
+@use 'components/buttons' as *;
+@use 'components/cards' as *;
+@use 'components/forms' as *;
 
 // Pages
-@import 'pages/comunes';
-@import 'pages/home';
-@import 'pages/productos';
-@import 'pages/portfolio';
-@import 'pages/resenas';
-@import 'pages/contacto';
+@use 'pages/comunes' as *;
+@use 'pages/home' as *;
+@use 'pages/productos' as *;
+@use 'pages/portfolio' as *;
+@use 'pages/resenas' as *;
+@use 'pages/contacto' as *;

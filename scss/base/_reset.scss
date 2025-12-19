@@ -19,11 +19,11 @@ html {
 }
 
 body {
-  font-family: $font-primary;
-  font-size: $font-size-base;
-  line-height: $line-height-normal;
-  color: $color-text;
-  background-color: $color-background;
+  font-family: variables.$font-primary;
+  font-size: variables.$font-size-base;
+  line-height: variables.$line-height-normal;
+  color: variables.$color-text;
+  background-color: variables.$color-background;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -32,8 +32,8 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
-  font-weight: $font-weight-bold;
-  line-height: $line-height-tight;
+  font-weight: variables.$font-weight-bold;
+  line-height: variables.$line-height-tight;
 }
 
 p {

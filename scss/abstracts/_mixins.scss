@@ -2,6 +2,9 @@
 // MIXINS - SCSS
 // ============================================
 
+// Asegurar acceso a variables
+@use 'abstracts/variables' as *;
+
 // --- MEDIA QUERIES (Mobile-First) ---
 @mixin media-sm {
   @media (min-width: $breakpoint-sm) {
@@ -106,6 +109,11 @@
 
 @mixin transicion-transform {
   transition: transform $transition-normal, box-shadow $transition-normal;
+}
+
+// Mixin for transitions
+@mixin transition($properties: all, $duration: 0.3s, $timing: ease) {
+  transition: $properties $duration $timing;
 }
 
 // --- BOTONES ---
