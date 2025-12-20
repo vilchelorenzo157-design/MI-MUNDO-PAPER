@@ -1,57 +1,59 @@
 // ============================================
-// PAGINA CONTACTO
+// CONTACTO
 // ============================================
 
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 .contacto {
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-3xl;
     
-    &__grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: $espacio-5xl;
-        
-        @include tablet {
-            grid-template-columns: 1fr;
-            gap: $espacio-3xl;
-        }
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: $spacing-2xl;
     }
+  }
+  
+  &__titulo {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-medium;
+    color: $color-text;
+    margin-bottom: $spacing-xl;
+  }
+  
+  &__dato {
+    margin-bottom: $spacing-lg;
+  }
+  
+  &__subtitulo {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semibold;
+    color: $color-text;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: $spacing-xs;
+  }
+  
+  &__texto {
+    font-size: $font-size-base;
+    color: $color-text-light;
+  }
+  
+  &__redes {
+    display: flex;
+    gap: $spacing-md;
+  }
+  
+  &__red {
+    font-size: $font-size-base;
+    color: $color-text-light;
+    transition: color $transition-normal;
     
-    &__titulo {
-        font-size: $fuente-xl;
-        font-weight: $peso-bold;
-        color: $color-primario;
-        margin-bottom: $espacio-xl;
+    &:hover {
+      color: $color-secondary;
     }
-    
-    &__dato {
-        margin-bottom: $espacio-xl;
-    }
-    
-    &__subtitulo {
-        font-size: $fuente-sm;
-        font-weight: $peso-bold;
-        color: $color-primario;
-        margin-bottom: $espacio-xs;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-    
-    &__texto {
-        font-size: $fuente-base;
-        color: $color-texto-claro;
-    }
-    
-    &__redes {
-        display: flex;
-        gap: $espacio-md;
-    }
-    
-    &__red {
-        font-size: 15px;
-        color: $color-texto-claro;
-        @include transicion(color);
-        
-        &:hover {
-            color: $color-secundario;
-        }
-    }
+  }
 }

@@ -2,44 +2,49 @@
 // FOOTER
 // ============================================
 
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 .footer {
-    background-color: $color-primario;
-    color: $color-blanco;
+  background-color: $color-primary;
+  color: $color-white;
+  padding: $spacing-3xl $container-padding $spacing-2xl;
+  margin-top: $spacing-3xl;
+  
+  &__logo {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: $spacing-lg;
     text-align: center;
-    padding: $espacio-4xl $espacio-lg $espacio-2xl;
-    margin-top: $espacio-5xl;
+  }
+  
+  &__menu {
+    @include flex-center;
+    flex-wrap: wrap;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-lg;
     
-    &__logo {
-        font-size: $fuente-md;
-        font-weight: $peso-bold;
-        margin-bottom: $espacio-lg;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+    @include tablet {
+      flex-direction: column;
+      gap: $spacing-sm;
     }
+  }
+  
+  &__enlace {
+    font-size: $font-size-sm;
+    color: rgba($color-white, 0.7);
+    transition: color $transition-normal;
     
-    &__menu {
-        @include flex-center;
-        gap: $espacio-xl;
-        margin-bottom: $espacio-xl;
-        
-        @include tablet {
-            flex-direction: column;
-            gap: $espacio-sm;
-        }
+    &:hover {
+      color: $color-secondary;
     }
-    
-    &__enlace {
-        font-size: $fuente-sm;
-        color: #cccccc;
-        @include transicion(color);
-        
-        &:hover {
-            color: $color-secundario;
-        }
-    }
-    
-    &__copy {
-        font-size: $fuente-xs;
-        color: $color-texto-gris;
-    }
+  }
+  
+  &__copy {
+    font-size: $font-size-xs;
+    color: rgba($color-white, 0.5);
+    text-align: center;
+  }
 }

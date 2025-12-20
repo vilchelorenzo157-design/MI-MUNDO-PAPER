@@ -3,64 +3,59 @@
 // ============================================
 
 // --- COLORES ---
-$color-primary: #c9a66b;      // Dorado principal
-$color-primary-dark: #a68352; // Dorado oscuro
-$color-primary-light: #e6c9a0; // Dorado claro
+$color-primary: #1a1a1a;
+$color-secondary: #c9a66b;
+$color-accent: #c9a66b;
 
-$color-neutral-dark: #1a1a1a;  // Negro/Gris oscuro
-$color-neutral-medium: #333333; // Gris medio
-$color-neutral-light: #fafafa;  // Blanco hueso
-$color-neutral-border: #e0e0e0; // Borde gris claro
+$color-text: #1a1a1a;
+$color-text-light: #666666;
+$color-text-muted: #999999;
 
-$color-white: #ffffff;
-$color-text: #333333;
 $color-background: #fafafa;
+$color-white: #ffffff;
+$color-border: #e5e5e5;
 
-// Colores para estados
-$color-success: #4caf50;
-$color-error: #f44336;
-$color-warning: #ff9800;
-$color-info: #2196f3;
-
-// Variables heredadas (compatibilidad)
-$color-primario: $color-neutral-dark;
-$color-secundario: $color-primary;
+// Compatibilidad
+$color-primario: $color-primary;
+$color-secundario: $color-secondary;
 $color-texto: $color-text;
-$color-texto-claro: #666666;
-$color-texto-gris: #999999;
+$color-texto-claro: $color-text-light;
+$color-texto-gris: $color-text-muted;
 $color-fondo: $color-background;
 $color-blanco: $color-white;
-$color-borde: $color-neutral-border;
+$color-borde: $color-border;
 
 // --- TIPOGRAFÍA ---
-$font-primary: 'Inter', Arial, sans-serif;
-$font-secondary: 'Georgia', serif;
-
+$font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 $fuente-principal: $font-primary;
 
-// Tamaños de fuente (nuevos estándares)
+// Tamaños
 $font-size-xs: 12px;
 $font-size-sm: 14px;
 $font-size-base: 16px;
-$font-size-lg: 18px;
-$font-size-xl: 20px;
-$font-size-2xl: 24px;
-$font-size-3xl: 32px;
-$font-size-4xl: 40px;
+$font-size-md: 18px;
+$font-size-lg: 20px;
+$font-size-xl: 24px;
+$font-size-2xl: 32px;
+$font-size-3xl: 40px;
+$font-size-4xl: 48px;
+$font-size-5xl: 64px;
+$font-size-hero: 72px;
 
-// Tamaños heredados (compatibilidad)
-$fuente-xs: 13px;
-$fuente-sm: 14px;
-$fuente-base: 16px;
-$fuente-md: 18px;
-$fuente-lg: 20px;
-$fuente-xl: 24px;
-$fuente-2xl: 28px;
-$fuente-3xl: 32px;
-$fuente-4xl: 40px;
-$fuente-5xl: 48px;
+// Compatibilidad
+$fuente-xs: $font-size-xs;
+$fuente-sm: $font-size-sm;
+$fuente-base: $font-size-base;
+$fuente-md: $font-size-md;
+$fuente-lg: $font-size-lg;
+$fuente-xl: $font-size-xl;
+$fuente-2xl: $font-size-2xl;
+$fuente-3xl: $font-size-3xl;
+$fuente-4xl: $font-size-4xl;
+$fuente-5xl: $font-size-5xl;
 
-// Pesos de fuente
+// Pesos
+$font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
@@ -71,76 +66,61 @@ $peso-medio: $font-weight-medium;
 $peso-bold: $font-weight-semibold;
 
 // Alturas de línea
-$line-height-tight: 1.2;
-$line-height-normal: 1.6;
-$line-height-relaxed: 1.8;
+$line-height-tight: 1.1;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.7;
 
 // --- ESPACIADO ---
 $spacing-xs: 8px;
-$spacing-sm: 12px;
-$spacing-md: 16px;
-$spacing-lg: 24px;
-$spacing-xl: 32px;
-$spacing-2xl: 48px;
-$spacing-3xl: 64px;
+$spacing-sm: 16px;
+$spacing-md: 24px;
+$spacing-lg: 32px;
+$spacing-xl: 48px;
+$spacing-2xl: 64px;
+$spacing-3xl: 96px;
+$spacing-4xl: 128px;
 
-// Espaciado heredado (compatibilidad)
+// Compatibilidad
 $espacio-xs: $spacing-xs;
 $espacio-sm: $spacing-sm;
 $espacio-md: $spacing-md;
-$espacio-lg: 20px;
-$espacio-xl: $spacing-lg;
-$espacio-2xl: 30px;
-$espacio-3xl: 40px;
-$espacio-4xl: 50px;
-$espacio-5xl: 60px;
+$espacio-lg: $spacing-lg;
+$espacio-xl: $spacing-xl;
+$espacio-2xl: $spacing-2xl;
+$espacio-3xl: $spacing-3xl;
+$espacio-4xl: $spacing-4xl;
+$espacio-5xl: 160px;
 
 // --- BORDES ---
 $border-radius-sm: 4px;
 $border-radius-md: 8px;
-$border-radius-lg: 12px;
-$border-radius-full: 50%;
+$border-radius-lg: 16px;
+$border-radius-xl: 24px;
 
-$radio-sm: 6px;
-$radio-md: 8px;
-$radio-lg: 12px;
-
-$border-width: 1px;
-$border-color: $color-neutral-border;
+$radio-sm: $border-radius-sm;
+$radio-md: $border-radius-md;
+$radio-lg: $border-radius-lg;
 
 // --- SOMBRAS ---
-$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-$shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+$shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+$shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
 
 // --- TRANSICIONES ---
-$transition-fast: 0.2s ease;
-$transition-normal: 0.3s ease;
-$transition-slow: 0.5s ease;
+$transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
-// --- BREAKPOINTS (Mobile-First) ---
-$breakpoint-sm: 480px;   // Teléfono pequeño
-$breakpoint-md: 768px;   // Tablet
-$breakpoint-lg: 1024px;  // Desktop pequeño
-$breakpoint-xl: 1200px;  // Desktop estándar
-$breakpoint-2xl: 1440px; // Desktop grande
+// --- BREAKPOINTS ---
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1200px;
 
-// Breakpoints heredados (compatibilidad)
 $tablet: $breakpoint-md;
 $mobile: $breakpoint-sm;
 
 // --- CONTENEDORES ---
-$container-max-width: 1200px;
-$container-padding: 20px;
+$container-max-width: 1400px;
+$container-padding: 24px;
 $ancho-maximo: $container-max-width;
-
-// --- Z-INDEX ---
-$z-index-dropdown: 100;
-$z-index-sticky: 200;
-$z-index-fixed: 300;
-$z-index-modal: 400;
-$z-index-tooltip: 500;
-
-// Exponer variables globalmente
-@forward 'variables';

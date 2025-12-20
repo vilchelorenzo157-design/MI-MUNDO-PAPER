@@ -2,41 +2,53 @@
 // FORMULARIOS
 // ============================================
 
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 .formulario {
+  &__campo {
+    margin-bottom: $spacing-md;
+  }
+  
+  &__label {
+    display: block;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semibold;
+    color: $color-text;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: $spacing-xs;
+  }
+  
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: $spacing-sm;
+    font-size: $font-size-base;
+    border: 1px solid $color-border;
+    border-radius: $border-radius-sm;
+    background-color: $color-white;
+    transition: border-color $transition-normal, box-shadow $transition-normal;
     
-    &__campo {
-        margin-bottom: $espacio-lg;
+    &:focus {
+      outline: none;
+      border-color: $color-secondary;
+      box-shadow: 0 0 0 3px rgba($color-secondary, 0.1);
     }
     
-    &__label {
-        display: block;
-        font-size: $fuente-sm;
-        font-weight: $peso-medio;
-        color: $color-primario;
-        margin-bottom: $espacio-xs;
+    &::placeholder {
+      color: $color-text-muted;
     }
-    
-    &__input,
-    &__textarea {
-        width: 100%;
-        padding: $espacio-sm $espacio-md;
-        font-size: 15px;
-        font-family: inherit;
-        border: 1px solid $color-borde;
-        border-radius: $radio-sm;
-        background-color: $color-blanco;
-        @include transicion(all);
-        
-        &:focus {
-            outline: none;
-            border-color: $color-secundario;
-            box-shadow: 0 0 0 3px rgba($color-secundario, 0.1);
-            transform: translateY(-1px);
-        }
-    }
-    
-    &__textarea {
-        min-height: 120px;
-        resize: vertical;
-    }
+  }
+  
+  &__textarea {
+    min-height: 140px;
+    resize: vertical;
+  }
+  
+  &__boton {
+    @include button-primary;
+    width: 100%;
+    padding: $spacing-sm;
+  }
 }

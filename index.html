@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Mi Mundo Paper | Papelería Artesanal</title>
+    <meta name="description" content="Papelería artesanal hecha a mano. Cuadernos, tarjetas, invitaciones y packaging personalizado.">
+    <meta name="keywords" content="papelería artesanal, cuadernos, tarjetas, invitaciones, packaging">
+    <meta name="author" content="Mi Mundo Paper">
+    
+    <meta property="og:title" content="Mi Mundo Paper | Papelería Artesanal">
+    <meta property="og:description" content="Creamos piezas únicas de papelería artesanal hechas a mano.">
+    <meta property="og:type" content="website">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a href="index.html" class="navbar-brand header__logo">Mi Mundo Paper</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a href="index.html" class="nav-link active">inicio</a></li>
+                        <li class="nav-item"><a href="pages/productos.html" class="nav-link">productos</a></li>
+                        <li class="nav-item"><a href="pages/portfolio.html" class="nav-link">portfolio</a></li>
+                        <li class="nav-item"><a href="pages/reseñas.html" class="nav-link">reseñas</a></li>
+                        <li class="nav-item"><a href="pages/contacto.html" class="nav-link">contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        
+        <section class="hero">
+            <div class="hero__contenido">
+                <h1 class="hero__titulo">Papelería Artesanal</h1>
+                <p class="hero__texto">Creamos piezas únicas hechas a mano con dedicación y materiales de primera calidad para momentos especiales.</p>
+                <a href="pages/portfolio.html" class="hero__boton">Ver Portfolio</a>
+            </div>
+            <div class="hero__imagen">
+                <!-- Carrusel Bootstrap -->
+                <div id="carruselHero" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carruselHero" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#carruselHero" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carruselHero" data-bs-slide-to="2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/marca.jfif" class="d-block w-100" alt="Papelería artesanal">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/caja.jpg" class="d-block w-100" alt="Cajas artesanales">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/CARRUSEL1111.jpg" class="d-block w-100" alt="Productos artesanales">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carruselHero" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carruselHero" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="nosotros">
+            <h2 class="nosotros__titulo">Sobre Nosotros</h2>
+            <p class="nosotros__texto">Somos un pequeño emprendimiento dedicado a la creación de papelería artesanal. Cada pieza que hacemos está pensada con cariño y atención al detalle.</p>
+        </section>
+
+        <section class="servicios">
+            <h2 class="servicios__titulo">Nuestros Servicios</h2>
+            <div class="servicios__grid">
+                <article class="servicio">
+                    <h3 class="servicio__titulo">Cuadernos</h3>
+                    <p class="servicio__texto">Cuadernos personalizados con diferentes tipos de encuadernación artesanal.</p>
+                </article>
+                <article class="servicio">
+                    <h3 class="servicio__titulo">Tarjetas</h3>
+                    <p class="servicio__texto">Tarjetas para toda ocasión, invitaciones y postales únicas.</p>
+                </article>
+                <article class="servicio">
+                    <h3 class="servicio__titulo">Packaging</h3>
+                    <p class="servicio__texto">Cajas y envoltorios artesanales para regalos especiales.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="contacto-home">
+            <h2 class="contacto-home__titulo">¿Tenés un proyecto?</h2>
+            <p class="contacto-home__texto">Escribinos y te ayudamos a hacerlo realidad</p>
+            <a href="pages/contacto.html" class="contacto-home__boton">Contactar</a>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__logo">Mi Mundo Paper</p>
+        <ul class="footer__menu">
+            <li><a href="index.html" class="footer__enlace">Inicio</a></li>
+            <li><a href="pages/productos.html" class="footer__enlace">Productos</a></li>
+            <li><a href="pages/portfolio.html" class="footer__enlace">Portfolio</a></li>
+            <li><a href="pages/reseñas.html" class="footer__enlace">Reseñas</a></li>
+            <li><a href="pages/contacto.html" class="footer__enlace">Contacto</a></li>
+        </ul>
+        <p class="footer__copy">&copy; 2025 Mi Mundo Paper</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

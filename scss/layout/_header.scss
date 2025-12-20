@@ -1,51 +1,62 @@
 // ============================================
-// HEADER CON BOOTSTRAP NAVBAR
+// HEADER
 // ============================================
 
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 .header {
-    background-color: $color-blanco;
-    border-bottom: 1px solid $color-borde;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba($color-background, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba($color-border, 0.5);
+  
+  .navbar {
+    padding: $spacing-md 0;
+  }
+  
+  .container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+  }
+  
+  &__logo {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    color: $color-text;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     
-    // Estilos para Bootstrap Navbar
-    .navbar {
-        padding: $espacio-lg 0;
+    &:hover {
+      color: $color-secondary;
     }
+  }
+  
+  .nav-link {
+    font-size: $font-size-sm;
+    color: $color-text-light;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: $spacing-xs $spacing-sm;
+    transition: color $transition-normal;
     
-    &__logo {
-        font-size: $fuente-md;
-        font-weight: $peso-bold;
-        color: $color-primario;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        
-        &:hover {
-            color: $color-secundario;
-        }
+    &:hover,
+    &.active {
+      color: $color-text;
     }
+  }
+  
+  .navbar-toggler {
+    border: none;
+    padding: $spacing-xs;
     
-    // Estilos para los enlaces del menu
-    .nav-link {
-        font-size: $fuente-sm;
-        color: $color-texto-claro;
-        text-transform: lowercase;
-        padding: $espacio-xs $espacio-md;
-        
-        &:hover {
-            color: $color-primario;
-        }
-        
-        &.active {
-            color: $color-primario;
-            font-weight: $peso-medio;
-        }
+    &:focus {
+      box-shadow: none;
     }
-    
-    // Boton hamburguesa
-    .navbar-toggler {
-        border-color: $color-borde;
-        
-        &:focus {
-            box-shadow: none;
-        }
-    }
+  }
 }

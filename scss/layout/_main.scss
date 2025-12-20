@@ -2,19 +2,16 @@
 // MAIN
 // ============================================
 
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 .main {
-    max-width: $ancho-maximo;
-    margin: 0 auto;
-    padding: $espacio-3xl $espacio-lg;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: $espacio-lg;
-
-    @include media-md {
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    }
-
-    @include media-lg {
-        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    }
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: $spacing-4xl $container-padding $spacing-3xl;
+  min-height: 100vh;
+  
+  @include tablet {
+    padding: $spacing-3xl $container-padding $spacing-2xl;
+  }
 }

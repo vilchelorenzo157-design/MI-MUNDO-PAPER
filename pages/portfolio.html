@@ -3,43 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Portfolio | Mi Mundo Paper</title>
-    <meta name="description" content="Descubre algunos de nuestros trabajos de papelería artesanal: invitaciones, cuadernos y más.">
-    <meta name="keywords" content="portfolio papelería, trabajos personalizados, invitaciones, cuadernos">
-    <meta name="author" content="Mi Mundo Paper">
-    <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="../styles.css">
+    <meta name="description" content="Portfolio de trabajos realizados: invitaciones, cuadernos corporativos y packaging artesanal.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="Navegación principal">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html" aria-label="Inicio - Mi Mundo Paper">Mi Mundo Paper</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a href="../index.html" class="navbar-brand header__logo">Mi Mundo Paper</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse" id="menuPrincipal">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="portfolio.html" aria-current="page">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="reseñas.html">Reseñas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a href="../index.html" class="nav-link">inicio</a></li>
+                        <li class="nav-item"><a href="productos.html" class="nav-link">productos</a></li>
+                        <li class="nav-item"><a href="portfolio.html" class="nav-link active">portfolio</a></li>
+                        <li class="nav-item"><a href="reseñas.html" class="nav-link">reseñas</a></li>
+                        <li class="nav-item"><a href="contacto.html" class="nav-link">contacto</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <main class="container mt-4" role="main">
-        <section>
-            <h1 class="text-center">Portfolio</h1>
-            <p class="lead text-center">Conoce algunos de nuestros trabajos realizados.</p>
+
+    <main class="main">
+        
+        <section class="pagina-titulo">
+            <h1 class="pagina-titulo__texto">Portfolio</h1>
+            <p class="pagina-titulo__subtexto">Conocé algunos de nuestros trabajos</p>
         </section>
+
+        <section class="portfolio">
+            <div class="portfolio__grid">
+                
+                <article class="trabajo">
+                    <div class="trabajo__imagen">
+                        <img src="../assets/gggggggggggg.jpg" alt="Invitaciones de boda personalizadas">
+                    </div>
+                    <div class="trabajo__info">
+                        <h2 class="trabajo__titulo">Invitaciones de Boda</h2>
+                        <p class="trabajo__descripcion">Set completo de invitaciones para casamiento con diseño floral</p>
+                        <p class="trabajo__categoria">Invitaciones</p>
+                    </div>
+                </article>
+
+                <article class="trabajo">
+                    <div class="trabajo__imagen">
+                        <img src="../assets/lillll.jfif" alt="Cuadernos corporativos personalizados">
+                    </div>
+                    <div class="trabajo__info">
+                        <h2 class="trabajo__titulo">Cuadernos Corporativos</h2>
+                        <p class="trabajo__descripcion">Cuadernos personalizados para empresa de diseño</p>
+                        <p class="trabajo__categoria">Corporativo</p>
+                    </div>
+                </article>
+
+                <article class="trabajo">
+                    <div class="trabajo__imagen">
+                        <img src="../assets/caja.jpg" alt="Packaging artesanal para velas">
+                    </div>
+                    <div class="trabajo__info">
+                        <h2 class="trabajo__titulo">Packaging Artesanal</h2>
+                        <p class="trabajo__descripcion">Cajas y etiquetas para emprendimiento de velas</p>
+                        <p class="trabajo__categoria">Packaging</p>
+                    </div>
+                </article>
+
+                <article class="trabajo">
+                    <div class="trabajo__imagen">
+                        <img src="../assets/3c0b8214aa188e2f37b22ceb1fac1381.jpg" alt="Álbum de fotos artesanal">
+                    </div>
+                    <div class="trabajo__info">
+                        <h2 class="trabajo__titulo">Álbum de Fotos</h2>
+                        <p class="trabajo__descripcion">Álbum personalizado para regalo de aniversario</p>
+                        <p class="trabajo__categoria">Álbumes</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
     </main>
-    <footer class="bg-light text-center py-3" role="contentinfo">
-        <p>&copy; 2025 Mi Mundo Paper</p>
+
+    <footer class="footer">
+        <p class="footer__logo">Mi Mundo Paper</p>
+        <ul class="footer__menu">
+            <li><a href="../index.html" class="footer__enlace">Inicio</a></li>
+            <li><a href="productos.html" class="footer__enlace">Productos</a></li>
+            <li><a href="portfolio.html" class="footer__enlace">Portfolio</a></li>
+            <li><a href="reseñas.html" class="footer__enlace">Reseñas</a></li>
+            <li><a href="contacto.html" class="footer__enlace">Contacto</a></li>
+        </ul>
+        <p class="footer__copy">&copy; 2025 Mi Mundo Paper</p>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

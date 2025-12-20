@@ -1,26 +1,42 @@
 // ============================================
-// ESTILOS COMUNES DE PAGINAS
+// ESTILOS COMUNES
 // ============================================
 
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 .pagina-titulo {
-    text-align: center;
-    padding: $espacio-3xl 0;
-    margin-bottom: $espacio-3xl;
-    animation: fadeIn 0.6s ease-out;
+  text-align: center;
+  padding: $spacing-3xl 0;
+  animation: fadeIn 0.6s ease-out;
+  
+  &__texto {
+    font-size: $font-size-5xl;
+    font-weight: $font-weight-light;
+    color: $color-text;
+    margin-bottom: $spacing-sm;
+    letter-spacing: -1px;
     
-    &__texto {
-        font-size: $fuente-4xl;
-        font-weight: $peso-bold;
-        color: $color-primario;
-        margin-bottom: $espacio-sm;
-        
-        @include mobile {
-            font-size: $fuente-3xl;
-        }
+    @include tablet {
+      font-size: $font-size-4xl;
     }
     
-    &__subtexto {
-        font-size: $fuente-md;
-        color: $color-texto-claro;
+    @include mobile {
+      font-size: $font-size-3xl;
     }
+  }
+  
+  &__subtexto {
+    font-size: $font-size-lg;
+    color: $color-text-light;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

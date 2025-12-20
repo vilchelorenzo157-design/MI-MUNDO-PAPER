@@ -2,28 +2,25 @@
 // MAIN SCSS - MI MUNDO PAPER
 // ============================================
 
-// Abstracts
-@use 'abstracts/variables' as variables;
-
 // Base
-@use 'base/reset' as *;
-@use 'base/typography' as *;
-@use 'base/animations' as *;
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/animations';
 
 // Layout
-@use 'layout/header' as *;
-@use 'layout/main' as *;
-@use 'layout/footer' as *;
+@use 'layout/header';
+@use 'layout/main';
+@use 'layout/footer';
 
 // Components
-@use 'components/buttons' as *;
-@use 'components/cards' as *;
-@use 'components/forms' as *;
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/forms';
 
 // Pages
-@use 'pages/comunes' as *;
-@use 'pages/home' as *;
-@use 'pages/productos' as *;
-@use 'pages/portfolio' as *;
-@use 'pages/resenas' as *;
-@use 'pages/contacto' as *;
+@use 'pages/comunes';
+@use 'pages/home';
+@use 'pages/productos';
+@use 'pages/portfolio';
+@use 'pages/resenas';
+@use 'pages/contacto';
