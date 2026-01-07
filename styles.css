@@ -411,6 +411,9 @@ a:hover {
   background-color: #c9a66b;
   transform: translateY(-2px);
 }
+.hero__boton:hover {
+  color: #ffffff;
+}
 @media (max-width: 768px) {
   .hero__imagen {
     order: -1;

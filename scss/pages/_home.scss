@@ -55,6 +55,10 @@
   
   &__boton {
     @include button-primary;
+    
+    &:hover {
+      color: $color-white;
+    }
   }
   
   &__imagen {
